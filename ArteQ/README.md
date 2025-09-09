@@ -232,27 +232,6 @@ Die Webseite enthält folgende Barrierefreiheitsfunktionen:
 - Vollständige Mobilgeräte-Unterstützung
 - Responsive Design für alle Bildschirmgrößen
 
-## Projektstruktur
-
-```
-arteq-website/
-├── index.html                # Hauptseite
-├── assets/
-│   ├── css/
-│   │   ├── style.css         # Hauptstile
-│   │   ├── responsive.css    # Responsive Anpassungen
-│   │   └── terms.css         # Stile für AGB-Seite
-│   ├── js/
-│   │   └── main.js           # JavaScript-Funktionalität
-│   └── images/               # Bilder und Grafiken
-├── pages/                    # Weitere Seiten
-│   ├── kontakt.html          # Kontaktseite
-│   ├── servicios/            # Leistungsdetails
-│   ├── terms.html            # Allgemeine Geschäftsbedingungen
-│   └── imprenta.html         # Geschäftspolitik
-└── README.md
-```
-
 ## Sprachen
 
 Die Webseite unterstützt folgende Sprachen:
