@@ -25,11 +25,11 @@ Professionelle Website für ARTEQ, die umfassende Dienstleistungen für Räumung
   - Entsorgungsservice
   - Winterdienst
   
-#### Verwendete Technologien:
+## Verwendete Technologien:
 
 ```javascript
 const Project = {
-  code: ["HTML", "CSS", "Javascript"],
+  code: ["HTML", "CSS", "JS"],
   technologies: {
     frontend: ["HTML5"],
     devTool: ["VS-Code"],
@@ -98,12 +98,6 @@ ARTEQ/
 - Moderne Browser (Chrome, Firefox, Safari, Edge)
 - Aktiviertes JavaScript für volle Funktionalität
 - Internetverbindung für externe Ressourcen
-
-## Support
-
-Bei Fragen oder Problemen wenden Sie sich bitte an:
-- E-Mail: info@arteq.de
-- Telefon: +49 (0) 123 456 789
 
 ## Technologien
 
@@ -227,16 +221,9 @@ Die Webseite enthält folgende Barrierefreiheitsfunktionen:
 ## Sprachen
 
 Die Webseite unterstützt folgende Sprachen:
-- Deutsch (Standard)
-- Español
-- Inglés
-
-## Kontakt
-
-- [Frankfurt am Main, Deutschland](https://www.google.com/maps/place/Frankfurt+am+Main)
-- [+49 (0) 123 456 789](tel:+49123456789)
-- [info@arteq.de](mailto:info@arteq.de)
-- [WhatsApp](https://wa.me/49123456789)
+- Deutsch   (Standard)
+- Spanisch  (Opt.)
+- Englisch  (Opt.)
 
 ## Sicherheit
 
