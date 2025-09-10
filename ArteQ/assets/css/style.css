@@ -1271,6 +1271,7 @@ gap: 1.5rem;
     font-size: 1.1rem;
 }
 
+
 /* Estilos responsivos para Términos y Condiciones */
 @media (max-width: 768px) {
     .terms-container {
@@ -1313,3 +1314,4 @@ gap: 1.5rem;
 /* Estilos para la página de Términos y Condiciones */
 .terms-container {
     padding: 100px 0 60px;
+}

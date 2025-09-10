@@ -25,17 +25,6 @@ Professionelle Website für ARTEQ, die umfassende Dienstleistungen für Räumung
   - Entsorgungsservice
   - Winterdienst
   
-## 🎨 Design-Spezifikationen
-
-- **Hauptfarben:**
-    - **Primär:** `#2563eb` (kräftiges Blau)
-    - **Sekundär:** `#f59e0b` (warmes Orange)
-    - **Akzentfarben:** `#1f2937` (Dunkelgrau für Text), `#f3f4f6` (Hellgrau für Hintergründe), `#ffffff` (Weiß)
-- **Typografie:**
-    - **Schriftfamilie:** `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif`
-    - **Einsatz:** Serifenlose Schriftarten für klare Lesbarkeit auf allen Geräten.
----
-
 #### Verwendete Technologien:
 
 ```javascript
@@ -48,16 +37,27 @@ const Project = {
 };
 ```
 
+## 🎨 Design-Spezifikationen
+
+- **Hauptfarben:**
+    - **Primär:** `#2563eb` (kräftiges Blau)
+    - **Sekundär:** `#f59e0b` (warmes Orange)
+    - **Akzentfarben:** `#1f2937` (Dunkelgrau für Text), `#f3f4f6` (Hellgrau für Hintergründe), `#ffffff` (Weiß)
+- **Typografie:**
+    - **Schriftfamilie:** `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif`
+    - **Einsatz:** Serifenlose Schriftarten für klare Lesbarkeit auf allen Geräten.
+---
+
 ## 📁 Projektstruktur
 
 ```
 ARTEQ/
 │
 ├── assets/                    # Statische Dateien
-│   ├── css/                   # Stylesheets
+│   ├── css/                   # Stylesheets  (ca. 1620 Zeilen)
 │   │   ├── style.css          # Haupt-Stylesheet
 │   │   └── responsive.css     # Stile für Mobilgeräte
-│   ├── js/                    # JavaScript-Dateien
+│   ├── js/                    # JavaScript-Dateien (ca. 575 Zeilen)
 │   │   ├── main.js            # Haupt-JavaScript
 │   │   └── cookies.js         # Cookie-Verwaltung
 │   └── images/                # Bilder und Icons
@@ -65,14 +65,14 @@ ARTEQ/
 │       ├── favicon.ico        # Browser-Tab-Icon
 │       └── ArteQ.png          # Bild Über uns
 │
-├── pages/                     # Weitere HTML-Seiten
+├── pages/                     # Weitere HTML-Seiten  (ca. 560 Zeilen)
 │   ├── kontakt.html           # Kontaktseite
 │   ├── Impressum.html         # Impressum
 │   ├── datenschutz.html       # Datenschutzerklärung
 │   ├── terms.html             # Allgemeine Geschäftsbedingungen
 │   └── cookies.html           # Cookie-Richtlinie
 │
-├── index.html                 # Startseite
+├── index.html                 # Startseite (ca. 558 Zeilen)
 └── README.md                  # Projektbeschreibung
 ```
 
@@ -337,4 +337,40 @@ Dieses Projekt ist zur privaten Nutzung bestimmt. Alle Rechte vorbehalten.
 
 ---
 
-Zuletzt aktualisiert: September 2025 von Darwin Paz*
+## Web Projekt
+
+- Wasserfallmodell entwickelt. Die Gesamtzeit, die der IT-Spezialist für die Entwicklung der Anwendung aufwenden kann, ist auf 40 Stunden begrenzt. Tabelle 1 zeigt im Detail, wie diese 40 Stunden auf die verschiedenen Phasen des Wasserfallmodells verteilt sind. weitere Details:
+```mermaid
+gantt
+    title Wasserfallmodell - Zeitplan (5 Tage)
+    dateFormat YYYY-MM-DD
+
+    section Phasen der Entwicklung
+
+    Analyse und Design     :a1, 2025-09-01, 0.75d
+    Entwurf                 :b1, after a1, 0.75d
+    Implementierung inkl. Tests:c1, after b1, 1.5d
+    Abnahme und Einführung  :d1, after c1, 1.25d
+    Dokumentation           :e1, after d1, 0.75d
+```
+## Wirtschaftlichkeitsanalyse des Projekts
+
+- Zeitplan des Wasserfallmodells und einem Stundensatz von 40 €/h für den IT-Spezialisten ergibt sich die folgende Kostenaufteilung für die Entwicklung der Anwendung:
+
+## Projektübersicht
+
+| Vorgang | Mitarbeiter | Zeit (h) | Kosten pro Stunde (€) | Kosten (€) |
+| :--- | :--- | :--- | :--- | :--- |
+| Analyse und Design | IT-Spezialist | 6 | 40 | 240 |
+| Entwurf | IT-Spezialist | 6 | 40 | 240 |
+| Implementierung inkl. Tests | IT-Spezialist | 12 | 40 | 480 |
+| Abnahme und Einführung | IT-Spezialist | 10 | 40 | 400 |
+| Dokumentation | IT-Spezialist | 6 | 40 | 240 |
+| **GESAMT** | **IT-Spezialist** | **40** | **40** | **1.600** |
+
+
+**Zuletzt aktualisiert:**
+
+```bash
+ September 2025 von Darwin Paz
+```
