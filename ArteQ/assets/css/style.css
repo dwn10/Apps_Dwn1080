@@ -622,11 +622,84 @@ button[type="submit"]:hover {
     margin-right: 10px;
 }
 
+/* Main Content */
+.main-content {
+    padding: 100px 0 40px; /* Aumenté el padding superior para evitar solapamiento con el menú */
+    margin-top: 20px; /* Espacio adicional para asegurar visibilidad */
+}
+
+/* Contact Title */
+.contact-title {
+    margin: 20px 0 30px 0;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Contact Info */
+.contact-info {
+    margin: 20px 0 10px;
+    padding: 20px 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-info p:first-child {
+    margin-top: 0;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
 /* Footer */
 .footer {
     background: var(--text-color);
     color: var(--white);
-    padding: 60px 0 20px;
+    padding: 40px 0 20px;
+    margin-top: 0; /* Aseguramos que no haya espacio extra por defecto */
 }
 
 .footer-content {
@@ -1177,20 +1250,20 @@ gap: 1.5rem;
 }
 
 .terms-section h2 i {
-    color: var(--primary-color);
-    font-size: 1.3rem;
+color: var(--primary-color);
+font-size: 1.3rem;
 }
 
 .terms-section p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    font-size: 1.02rem;
+margin-bottom: 15px;
+line-height: 1.8;
+color: var(--text-secondary);
+font-size: 1.02rem;
 }
 
 .terms-section ul {
-    margin: 15px 0 15px 20px;
-    padding-left: 5px;
+margin: 15px 0 15px 20px;
+padding-left: 5px;
 }
 
 .terms-section li {
@@ -1270,7 +1343,6 @@ gap: 1.5rem;
     text-align: center;
     font-size: 1.1rem;
 }
-
 
 /* Estilos responsivos para Términos y Condiciones */
 @media (max-width: 768px) {
