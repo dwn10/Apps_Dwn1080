@@ -2,6 +2,52 @@
 
 Professionelle Website für ARTEQ, die umfassende Dienstleistungen für Räumungen, Umzüge, Transport und Reinigung in Hessen, Rheinland-Pfalz und Baden-Württemberg anbietet.
 
+---
+
+### Services von ARTEQ
+- **Räumungsservice**
+  - Haushaltsauflösungen
+  - Entrümpelungen
+  - Schädlingsbekämpfung
+
+- **Umzugsservice**
+  - Privat- und Geschäftsumzüge
+  - Möbeltransport
+  - Umzugsplanung
+
+- **Reinigungsdienstleistungen**
+  - Grundreinigung
+  - Unterhaltsreinigung
+  - Spezielle Reinigungen
+
+- **Zusätzliche Services**
+  - Hausmeisterservice
+  - Entsorgungsservice
+  - Winterdienst
+  
+## 🎨 Design-Spezifikationen
+
+- **Hauptfarben:**
+    - **Primär:** `#2563eb` (kräftiges Blau)
+    - **Sekundär:** `#f59e0b` (warmes Orange)
+    - **Akzentfarben:** `#1f2937` (Dunkelgrau für Text), `#f3f4f6` (Hellgrau für Hintergründe), `#ffffff` (Weiß)
+- **Typografie:**
+    - **Schriftfamilie:** `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif`
+    - **Einsatz:** Serifenlose Schriftarten für klare Lesbarkeit auf allen Geräten.
+---
+
+#### Verwendete Technologien:
+
+```javascript
+const Project = {
+  code: ["HTML", "CSS", "Javascript"],
+  technologies: {
+    frontend: ["HTML5"],
+    devTool: ["VS-Code"],
+  },
+};
+```
+
 ## 📁 Projektstruktur
 
 ```
@@ -30,79 +76,22 @@ ARTEQ/
 └── README.md                  # Projektbeschreibung
 ```
 
-## Technische Implementierung
+## ⚙️ Technische Implementierung
 
-- Moderne, responsive Webseite mit HTML5, CSS3 und JavaScript
+- **Frontend**
+- Moderne, Webseite mit HTML5, CSS3 und JavaScript
 - Optimiert für Suchmaschinen (SEO)
 - Barrierefreies Design gemäß WCAG-Richtlinien
 - Kontaktformular mit Client-seitiger Validierung
 - Dynamische Inhalte mit JavaScript
+- Responsive Design für alle Geräte
 - Optimierte Ladezeiten
-
-## Funktionen
-
-### Efectos Especiales
-- **Efecto de Máquina de Escribir**
-  - Implementado en el cuadro de información principal
-  - Muestra el texto como si se estuviera escribiendo en tiempo real
-  - Incluye un cursor parpadeante al final del texto
-  - Totalmente responsivo y compatible con todos los dispositivos
-
-### Servicios
-- **Räumungsservice**
-  - Haushaltsauflösungen
-  - Entrümpelungen
-  - Schädlingsbekämpfung
-
-- **Umzugsservice**
-  - Privat- und Geschäftsumzüge
-  - Möbeltransport
-  - Umzugsplanung
-
-- **Reinigungsdienstleistungen**
-  - Grundreinigung
-  - Unterhaltsreinigung
-  - Spezielle Reinigungen
-
-- **Zusätzliche Services**
-  - Hausmeisterservice
-  - Entsorgungsservice
-  - Winterdienst
-
-## Technische Details
-
-- **Frontend**
-  - HTML5 semantisch strukturiert
-  - Efectos de animación CSS3 (keyframes, transitions)
-  - Interacciones dinámicas con JavaScript vanilla
-  - CSS3 mit modernen Layout-Techniken (Flexbox, Grid)
-  - Responsive Design für alle Geräte
-  - JavaScript für interaktive Elemente
 
 - **SEO-Optimierung**
   - Meta-Tags und strukturierte Daten
   - Optimierte Ladezeiten
   - Mobile-First-Ansatz
   - Klare URL-Struktur
-
-## Nächste Schritte
-
-### Geplante Verbesserungen
-
-1. **Sicherheitserweiterungen**
-   - Implementierung von hCaptcha für das Kontaktformular
-   - Erweiterte Formularvalidierung
-   - SSL-Verschlüsselung
-
-2. **Erweiterte Funktionen**
-   - Online-Terminvereinbarung
-   - Live-Chat-Support
-   - Kundenportal für Auftragsverfolgung
-
-3. **Leistung & Optimierung**
-   - Lazy Loading für Bilder
-   - Caching-Strategien
-   - Performance-Monitoring
 
 ## Technische Anforderungen
 
@@ -221,8 +210,11 @@ document.addEventListener('DOMContentLoaded', function() {
 Die Webseite enthält folgende Barrierefreiheitsfunktionen:
 
 - Kontrastreiches Design
+- Semantische HTML5-Struktur
 - Tastaturnavigation
-- Screenreader-Kompatibilität
+- Verbesserter Farbkontrast
+- ARIA-Attribute für bessere Screenreader-Kompatibilität
+- Sprachausgabe für bessere Barrierefreiheit
 - Anpassbare Schriftgrößen
 - Klare Struktur und Überschriften
 
@@ -238,14 +230,6 @@ Die Webseite unterstützt folgende Sprachen:
 - Deutsch (Standard)
 - Español
 - Inglés
-
-## Barrierefreiheit
-
-- Tastatur-Navigation
-- Verbesserter Farbkontrast
-- Sprachausgabe für bessere Barrierefreiheit
-- Semantische HTML5-Struktur
-- ARIA-Attribute für bessere Screenreader-Kompatibilität
 
 ## Kontakt
 
@@ -263,7 +247,24 @@ Die Webseite unterstützt folgende Sprachen:
 - **HTTPS-Verschlüsselung** für alle übertragenen Daten
 - **Regelmäßige Sicherheitsaudits** der Webanwendung
 
-### Geplante Verbesserungen
+## Nächste Schritte
+
+### 🚀 Zukünftige Verbesserungen
+
+1. **Sicherheitserweiterungen**
+   - Implementierung von hCaptcha für das Kontaktformular
+   - Erweiterte Formularvalidierung
+   - SSL-Verschlüsselung
+
+2. **Erweiterte Funktionen**
+   - Online-Terminvereinbarung
+   - Live-Chat-Support
+   - Kundenportal für Auftragsverfolgung
+
+3. **Leistung & Optimierung**
+   - Lazy Loading für Bilder (Optional)
+   - Caching-Strategien
+   - Performance-Monitoring
 
 #### 1. Schutz vor Bots & Spam
 - [ ] **hCaptcha Integration**
