@@ -154,11 +154,61 @@ Diese Webseite verwendet Cookies, um die Benutzererfahrung zu verbessern und die
 
 #### Technische Umsetzung
 ```javascript
-// Beispiel für die Cookie-Consent-Implementierung
-document.addEventListener('DOMContentLoaded', function() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const acceptAllBtn = document.getElementById('accept-all-cookies');
-    const savePrefsBtn = document.getElementById('save-preferences');
+## 🍪 Cookie-Verwaltung
+
+Die Implementierung des Cookie-Banners umfasst:
+
+- **Schaltfläche 'Alle akzeptieren'**: Akzeptiert alle Cookies (notwendige, analytische und Marketing-Cookies)
+- **Schaltfläche 'Einstellungen'**: Ermöglicht die Anpassung der Cookie-Einstellungen
+- **Schaltfläche 'Ablehnen'**: Lehnt alle Cookies mit Ausnahme der technisch notwendigen ab
+
+### Implementierte Funktionen:
+
+1. **Speicherung der Einstellungen**: Benutzereinstellungen werden in Cookies mit einer Gültigkeit von 1 Jahr gespeichert
+2. **Selektives Laden**: Drittanbieter-Skripte werden nur gemäß den Benutzereinstellungen geladen
+3. **Beständigkeit**: Die Einstellungen bleiben über Sitzungen hinweg erhalten
+4. **Barrierefreiheit**: Die Steuerelemente sind tastaturbedienbar und mit Bildschirmlesegeräten kompatibel
+
+### Implementierungsbeispiel:
+
+```javascript
+// Beispiel für die Implementierung der 'Ablehnen'-Schaltfläche
+document.getElementById('reject-cookies').addEventListener('click', function() {
+    setCookie('cookie_consent', 'necessary', 365);
+    setCookie('necessary_cookies', 'true', 365);
+    setCookie('analytics_cookies', 'false', 365);
+    setCookie('marketing_cookies', 'false', 365);
+    cookieBanner.style.display = 'none';
+    loadCookies();
+});
+```
+
+### Speicherung der Cookie-Einstellungen
+
+#### Bei Klick auf "Alle akzeptieren" werden folgende Cookies im Browser des Benutzers gespeichert:
+
+| Cookie-Name | Wert | Gültigkeit | Zweck |
+|-------------|------|------------|-------|
+| `cookie_consent` | `all` | 365 Tage | Zeigt an, dass der Benutzer allen Cookie-Typen zugestimmt hat |
+| `necessary_cookies` | `true` | 365 Tage | Aktiviert technisch notwendige Cookies |
+| `analytics_cookies` | `true` | 365 Tage | Aktiviert Analyse-Cookies |
+| `marketing_cookies` | `true` | 365 Tage | Aktiviert Marketing-Cookies |
+
+#### Speicherort:
+- Die Cookies werden im Browser des Benutzers gespeichert
+- Sie sind nur für die eigene Domain sichtbar
+- Können in den Browsereinstellungen eingesehen und verwaltet werden
+
+#### Sicherheit:
+- Keine Speicherung personenbezogener Daten in den Cookies
+- Cookies sind nur über HTTPS verfügbar (wenn die Website mit SSL gesichert ist)
+- Gültigkeitsdauer: 1 Jahr nach der Zustimmung
+
+#### Überprüfung der Cookies:
+Benutzer können die gespeicherten Cookies über die Entwicklertools des Browsers (F12) unter folgendem Pfad einsehen:
+- Chrome/Edge: Application > Cookies > [Ihre-Domain]
+- Firefox: Speicher > Cookies > [Ihre-Domain]
+- Safari: Speicher > Cookies
     
     // Überprüfen, ob bereits eine Auswahl getroffen wurde
     if (!getCookie('cookie_consent')) {

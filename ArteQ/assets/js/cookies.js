@@ -23,15 +23,42 @@ document.addEventListener('DOMContentLoaded', function() {
         loadCookies();
     });
 
+    // Reject all non-essential cookies
+    const rejectCookiesBtn = document.getElementById('reject-cookies');
+    if (rejectCookiesBtn) {
+        rejectCookiesBtn.addEventListener('click', function() {
+            setCookie('cookie_consent', 'necessary', 365);
+            setCookie('necessary_cookies', 'true', 365); // Necessary cookies are always enabled
+            setCookie('analytics_cookies', 'false', 365);
+            setCookie('marketing_cookies', 'false', 365);
+            cookieBanner.style.display = 'none';
+            loadCookies();
+            
+            // Update checkboxes in settings if open
+            cookieCheckboxes.forEach(checkbox => {
+                if (checkbox.id === 'necessary_cookies') {
+                    checkbox.checked = true;
+                } else {
+                    checkbox.checked = false;
+                }
+            });
+        });
+    }
+
     // Customize cookies
     customizeBtn.addEventListener('click', function() {
         cookieBanner.style.display = 'none';
         cookieSettings.style.display = 'block';
+        // Asegurarse de que el modal sea visible
+        cookieSettings.classList.add('visible');
+        // Inicializar los checkboxes con los valores guardados
+        initCheckboxes();
     });
 
     // Back to banner
     backToBannerBtn.addEventListener('click', function() {
         cookieSettings.style.display = 'none';
+        cookieSettings.classList.remove('visible');
         cookieBanner.style.display = 'block';
     });
 
@@ -42,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         setCookie('cookie_consent', 'custom', 365);
         cookieSettings.style.display = 'none';
+        cookieSettings.classList.remove('visible');
         loadCookies();
     });
 
