@@ -72,7 +72,7 @@
             <div class="contact-info">
                 <h3>Kontakt</h3>
                 <p>Bei Fragen zu diesen AGB wenden Sie sich bitte an:</p>
-                <p><i class="fas fa-envelope"></i> <a href="javascript:linkTo_UnCryptMailto('jotujp`bsdspnqfrnbns')">info(at)arteq(dot)com</a></p>
+                <p><i class="fas fa-envelope"></i> info(at)arteq(dot)com</p>
                 <p><i class="fas fa-phone"></i> 900 123 456</p>
             </div>
         </div>
@@ -81,12 +81,16 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 ARTEQ. Alle Rechte vorbehalten.</p>
+                <p><span id="current-year"></span> ARTEQ. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
 
     <script src="../assets/js/email-obfuscator.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
