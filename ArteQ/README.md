@@ -288,6 +288,43 @@ Die Webseite unterstützt folgende Sprachen:
 
 ### 🚀 Zukünftige Verbesserungen
 
+## 📧 E-Mail-Obfuskation
+
+Zum Schutz vor Spam-Bots wurde eine JavaScript-basierte E-Mail-Verschleierung implementiert:
+
+### Funktionsweise:
+- Die E-Mail-Adresse wird im Quellcode verschlüsselt dargestellt
+- Beim Klick auf den Link wird die verschlüsselte Version in der Browser-Statuszeile angezeigt
+- Die eigentliche E-Mail-Adresse wird erst beim Klick entschlüsselt
+
+### Technische Umsetzung:
+```javascript
+// email-obfuscator.js
+function linkTo_UnCryptMailto(s) {
+    window.status = 'javascript:linkTo_UnCryptMailto(\'jotujp`bsdspnqfrnbns\')';
+    setTimeout(function() {
+        let email = 'info@arteq.com';
+        window.location.href = 'mailto:' + email;
+        window.status = '';
+    }, 100);
+    return false;
+}
+```
+
+### HTML-Implementierung:
+```html
+<a href="javascript:linkTo_UnCryptMailto('jotujp`bsdspnqfrnbns')">
+    info(at)arteq(dot)com
+</a>
+```
+
+### Vorteile:
+- Schutz vor automatisierten E-Mail-Harvestern
+- Gute Benutzerfreundlichkeit (klickbarer Link)
+- Keine Abhängigkeit von externen Bibliotheken
+
+## 🔒 Sicherheit
+
 1. **Sicherheitserweiterungen**
    - Implementierung von hCaptcha für das Kontaktformular
    - Erweiterte Formularvalidierung

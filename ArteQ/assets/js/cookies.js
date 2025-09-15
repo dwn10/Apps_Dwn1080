@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToBannerBtn = document.getElementById('back-to-banner');
     const cookieCheckboxes = document.querySelectorAll('.cookie-option input[type="checkbox"]');
     
-    // Check if user has already made a choice
+    // Asegurarse de que los elementos existen
+    if (!cookieBanner || !cookieSettings || !customizeBtn) {
+        console.error('No se encontraron los elementos necesarios para el banner de cookies');
+        return;
+    }
+    
+    // Mostrar el banner si no hay preferencia guardada
     if (!getCookie('cookie_consent')) {
         cookieBanner.style.display = 'block';
     }
@@ -47,12 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Customize cookies
     customizeBtn.addEventListener('click', function() {
+        console.log('Botón Einstellungen clickeado');
+        // Ocultar el banner
         cookieBanner.style.display = 'none';
+        
+        // Mostrar el modal de configuración
         cookieSettings.style.display = 'block';
-        // Asegurarse de que el modal sea visible
         cookieSettings.classList.add('visible');
+        
         // Inicializar los checkboxes con los valores guardados
-        initCheckboxes();
+        if (typeof initCheckboxes === 'function') {
+            initCheckboxes();
+        } else {
+            console.error('La función initCheckboxes no está definida');
+        }
+        
+        console.log('Modal de configuración mostrado');
     });
 
     // Back to banner
