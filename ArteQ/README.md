@@ -209,7 +209,7 @@ Benutzer können die gespeicherten Cookies über die Entwicklertools des Browser
 - Chrome/Edge: Application > Cookies > [Ihre-Domain]
 - Firefox: Speicher > Cookies > [Ihre-Domain]
 - Safari: Speicher > Cookies
-    
+```javascript    
     // Überprüfen, ob bereits eine Auswahl getroffen wurde
     if (!getCookie('cookie_consent')) {
         cookieConsent.style.display = 'block';
@@ -228,7 +228,6 @@ Benutzer können die gespeicherten Cookies über die Entwicklertools des Browser
         setCookie('cookie_consent', 'custom', 365);
         cookieConsent.style.display = 'none';
     });
-});
 ```
 
 ### Rechtliche Anforderungen
