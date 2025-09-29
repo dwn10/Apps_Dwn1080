@@ -2,6 +2,12 @@
 
 Professionelle Website für ARTEQ, die umfassende Dienstleistungen für Räumungen, Umzüge, Transport und Reinigung in Hessen, Rheinland-Pfalz und Baden-Württemberg anbietet.
 
+- ftp://109.106.250.157
+- 109.106.250.157 / u859512772.dwnpaz / M4M4v3RG4.25* / 
+- 21
+
+
+- buzon: info@arte-q.com / e9+J3D5&Tfn
 ---
 
 ### Services von ARTEQ
@@ -75,7 +81,7 @@ ARTEQ/
 ├── index.html                 # Startseite (ca. 558 Zeilen)
 └── README.md                  # Projektbeschreibung
 ```
-
+1234
 ## ⚙️ Technische Implementierung
 
 - **Frontend**
@@ -153,7 +159,7 @@ Diese Webseite verwendet Cookies, um die Benutzererfahrung zu verbessern und die
 - Speichert die getroffenen Auswahlpräferenzen
 
 #### Technische Umsetzung
-```javascript
+
 ## 🍪 Cookie-Verwaltung
 
 Die Implementierung des Cookie-Banners umfasst:
@@ -245,7 +251,7 @@ Benutzer können die gespeicherten Cookies über die Entwicklertools des Browser
 - Datenschutzbeauftragter: Bei Bedarf über die Kontaktdaten im Impressum
 
 ### Weitere Informationen
-- Detaillierte Informationen finden Sie in unserer [Datenschutzerklärung](/datenschutz.html)
+- Detaillierte Informationen finden Sie in unserer [Datenschutzerklärung](#)
 - Cookie-Einstellungen können jederzeit über den Link im Footer der Webseite angepasst werden
 
 ## Barrierefreiheit
@@ -283,10 +289,6 @@ Die Webseite unterstützt folgende Sprachen:
 - **HTTPS-Verschlüsselung** für alle übertragenen Daten
 - **Regelmäßige Sicherheitsaudits** der Webanwendung
 
-## Nächste Schritte
-
-### 🚀 Zukünftige Verbesserungen
-
 ## 📧 E-Mail-Obfuskation
 
 Zum Schutz vor Spam-Bots wurde eine JavaScript-basierte E-Mail-Verschleierung implementiert:
@@ -302,7 +304,7 @@ Zum Schutz vor Spam-Bots wurde eine JavaScript-basierte E-Mail-Verschleierung im
 function linkTo_UnCryptMailto(s) {
     window.status = 'javascript:linkTo_UnCryptMailto(\'jotujp`bsdspnqfrnbns\')';
     setTimeout(function() {
-        let email = 'info@arteq.com';
+        let email = 'info@arte-q.com';
         window.location.href = 'mailto:' + email;
         window.status = '';
     }, 100);
@@ -313,7 +315,7 @@ function linkTo_UnCryptMailto(s) {
 ### HTML-Implementierung:
 ```html
 <a href="javascript:linkTo_UnCryptMailto('jotujp`bsdspnqfrnbns')">
-    info(at)arteq(dot)com
+    info(at)arte-q(dot)com
 </a>
 ```
 
@@ -321,6 +323,10 @@ function linkTo_UnCryptMailto(s) {
 - Schutz vor automatisierten E-Mail-Harvestern
 - Gute Benutzerfreundlichkeit (klickbarer Link)
 - Keine Abhängigkeit von externen Bibliotheken
+
+## Nächste Schritte
+
+### 🚀 Zukünftige Verbesserungen
 
 ## 🔒 Sicherheit
 
@@ -391,7 +397,7 @@ app.use(helmet.frameguard({ action: 'deny' }));
 
 ### Meldung von Sicherheitslücken
 
-Wir nehmen die Sicherheit unserer Webseite sehr ernst. Falls Sie eine Sicherheitslücke entdecken, kontaktieren Sie uns bitte unter [sicherheit@arteq.de](mailto:sicherheit@arteq.de). Wir schätzen Ihre Unterstützung sehr und werden jeden gemeldeten Vorfall sorgfältig prüfen.
+Wir nehmen die Sicherheit unserer Webseite sehr ernst. Falls Sie eine Sicherheitslücke entdecken, kontaktieren Sie uns bitte unter [sicherheit@arte-q.de](mailto:#). Wir schätzen Ihre Unterstützung sehr und werden jeden gemeldeten Vorfall sorgfältig prüfen.
 
 **Bitte geben Sie keine Sicherheitslücken öffentlich bekannt**, bevor Sie uns die Möglichkeit gegeben haben, das Problem zu beheben.
 
@@ -407,7 +413,7 @@ Wir nehmen die Sicherheit unserer Webseite sehr ernst. Falls Sie eine Sicherheit
 ## Lizenz
 
 Dieses Projekt ist zur privaten Nutzung bestimmt. Alle Rechte vorbehalten.
-
+ArteQ & Ecuador-IT
 ---
 
 ## Web Projekt
@@ -445,5 +451,10 @@ gantt
 **Zuletzt aktualisiert:**
 
 ```bash
- September 2025 von Darwin Paz
+ September 2025
+```
+
+**Entwicklung:**
+```bash
+Darwin Paz
 ```

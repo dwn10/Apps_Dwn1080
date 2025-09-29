@@ -6,7 +6,7 @@ function linkTo_UnCryptMailto(s) {
     // Esperar un momento para que se muestre en la barra de estado
     setTimeout(function() {
         // Decodificar el email
-        let email = 'info@arteq.com';
+        let email = 'info@arte-q.com';
         // Redirigir al cliente de correo
         window.location.href = 'mailto:' + email;
         // Limpiar la barra de estado después de la redirección

@@ -445,6 +445,100 @@ function validateForm(event) {
     return true;
 }
 
+//---------------------------------------------
+
+// Campo de fecha y el menú desplegable de hora
+const dateInput = document.getElementById('appointmentDate');
+const timeSelect = document.getElementById('appointmentTime');
+
+// Establece la fecha mínima a hoy para evitar selecciones en el pasado
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+// Horas de citas simuladas
+const allTimeSlots = {
+    weekday: ['09:00', '10:30', '12:00', '14:00', '15:30', '17:00'],
+    saturday: ['09:00', '11:00', '12:00']
+};
+
+// Función para actualizar las horas disponibles
+const updateAvailableTimes = (dateString) => {
+    timeSelect.innerHTML = '';
+    timeSelect.disabled = true;
+
+    if (!dateString) {
+        timeSelect.innerHTML = '<option value="">Wählen Sie zuerst ein Datum aus</option>';
+        return;
+    }
+
+    const selectedDate = new Date(dateString + 'T00:00:00');
+    const dayOfWeek = selectedDate.getDay(); // 0=Domingo, 6=Sábado
+
+    let availableSlots = [];
+    if (dayOfWeek > 0 && dayOfWeek < 6) { // Lunes a Viernes
+        availableSlots = allTimeSlots.weekday;
+    } else if (dayOfWeek === 6) { // Sábado
+        availableSlots = allTimeSlots.saturday;
+    }
+
+    // Comprobar si la fecha seleccionada es hoy
+    const isToday = selectedDate.toDateString() === new Date().toDateString();
+    
+    // Filtrar las horas si es el día de hoy
+    if (isToday) {
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+
+        availableSlots = availableSlots.filter(slot => {
+            const [hourStr, minuteStr] = slot.split(':');
+            const slotHour = parseInt(hourStr, 10);
+            const slotMinute = parseInt(minuteStr, 10);
+            
+            // Compara la hora del slot con la hora actual
+            if (slotHour > currentHour) {
+                return true;
+            }
+            // Si la hora es la misma, compara los minutos
+            if (slotHour === currentHour && slotMinute > currentMinute) {
+                return true;
+            }
+            return false;
+        });
+    }
+
+    // Resto de la lógica (remoción aleatoria y renderizado)
+    if (availableSlots.length > 0) {
+        const dayOfMonth = selectedDate.getDate();
+        const filteredSlots = availableSlots.filter((_, index) => (index + dayOfMonth) % 3 !== 0);
+        
+        if (filteredSlots.length > 0) {
+            timeSelect.innerHTML = '<option value="">Wählen Sie eine Zeit</option>';
+            filteredSlots.forEach(slot => {
+                const option = document.createElement('option');
+                option.value = slot;
+                option.textContent = slot;
+                timeSelect.appendChild(option);
+            });
+            timeSelect.disabled = false;
+        } else {
+             timeSelect.innerHTML = '<option value="">Vollständig reserviert</option>';
+        }
+    } else {
+        timeSelect.innerHTML = '<option value="">Nicht verfügbar</option>';
+    }
+};
+
+// Escucha el cambio de fecha para actualizar las horas disponibles
+dateInput.addEventListener('change', (e) => {
+    updateAvailableTimes(e.target.value);
+});
+
+//---------------------------------------------
+
 // Asignar el manejador de eventos al formulario
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
